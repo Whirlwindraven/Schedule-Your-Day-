@@ -1,6 +1,17 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+let displayTime = document.querySelector("#currentDay");
+
+let currentTime = moment();
+
+displayTime.textContent = currentTime.format("dddd, MMMM Do")
+
+$(".saveBtn").on("click", function() {
+    // get row text field class and row id values
+    let value = $(this).siblings(".description").val();
+    let time = $(this).parent().attr("id");
+
+    // save in localStorage
+    localStorage.setItem(time /* aka KEY = row id */, value /* text in the textarea */);
+});
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
