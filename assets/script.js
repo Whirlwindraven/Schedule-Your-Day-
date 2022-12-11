@@ -54,3 +54,21 @@ let hour4 = 16;
 let hour5 = 17;
 
 let currentHour = moment().format('H');
+
+// 9am 
+if (currentHour < hour9) {
+    $("#9am-text").addClass("future");
+} else if (currentHour > hour9) {
+    $("#9am-text").addClass("past");
+} else if (currentHour = hour9) {
+    $("#9am-text").addClass("present");
+}
+
+// 10am 
+if (currentHour < hour10) {
+    $("#10am-text").addClass("future");
+} else if (currentHour > hour10) {
+    $("#10am-text").addClass("past");
+} else if (currentHour = hour10) {
+    $("#10am-text").addClass("present");
+}
