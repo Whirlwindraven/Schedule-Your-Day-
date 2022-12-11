@@ -40,3 +40,17 @@ $("#hour-4pm .description").val(localStorage.getItem("hour-4pm" /* localStorage 
 
 // 5pm
 $("#hour-5pm .description").val(localStorage.getItem("hour-5pm" /* localStorage KEY also the row id */));
+
+// converting time and display
+
+let hour9 = 9;
+let hour10 = 10;
+let hour11 = 11;
+let hour12 = 12;
+let hour1 = 13;
+let hour2 = 14;
+let hour3 = 15;
+let hour4 = 16;
+let hour5 = 17;
+
+let currentHour = moment().format('H');
